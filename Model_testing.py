@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from itertools import zip_longest
 
 # Read the CSV file, drop NaN values
-data_frame = pd.read_csv('/Users/luzijungmayr/Desktop/Stuff/University Msc/Research Project 1b/Project/Data and Script/cleaned_data.csv', index_col=0)
+data_frame = pd.read_csv('your/file/location/cleaned_data.csv', index_col=0)
 data_frame = data_frame.dropna()
 
 # Define parameters and execute the functions
