@@ -2,6 +2,8 @@
 
 UMAP Embedding and Kmeans Clustering of Macrophage Feature Data
 
+For the csv file of macrophage data contact Dr Julia Sero as the file size is too large to be uploaded.
+
 Groupings_Explained.py
 This script contains information on how the data has been grouped for analysis.
 
