@@ -1,33 +1,16 @@
 import numpy as np
-import sklearn.datasets
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-import datashader
-import holoviews
-import numba
 import umap
 import umap.plot
-from colorcet import glasbey_bw
-from sklearn.preprocessing import LabelEncoder
-from sklearn.decomposition import PCA
-import plotly.graph_objects as go
-from mpl_toolkits.mplot3d import Axes3D
-import plotly.express as px
 from sklearn.metrics import silhouette_score
 from sklearn.model_selection import ParameterGrid
-from scipy.cluster import hierarchy
-from sklearn.cluster import KMeans #pre-processing clustering
+from sklearn.cluster import KMeans 
 from sklearn.datasets import make_blobs
-from sklearn.mixture import GaussianMixture
-import hdbscan
 from sklearn.model_selection import GridSearchCV, KFold
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics.cluster import silhouette_samples
-import time
-from tqdm import tqdm
 
 # Read the CSV file, drop NaN values
 data_frame = pd.read_csv('/your/file/location/cleaned_data.csv')
