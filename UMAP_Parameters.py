@@ -29,10 +29,9 @@ from sklearn.metrics.cluster import silhouette_samples
 
 
 #Groups names for selecting are: 'M0', 'M1', 'M2', 'Cardiac', 'SIS', 'UMB', 'Card_M0', 'Card_M1', 'Card_M2', 'SIS_M0', 'SIS_M1', 'SIS_M2', 'UBM_M0', 'UBM_M1', 'UBM_M2'}
-#index = {'M0': '1', 'M1': '2', 'M2': '3', 'Cardiac': '4', 'SIS': '5', 'UMB': '6', 'Card_M0': '7', 'Card_M1': '8', 'Card_M2'; '9', 'SIS_M0': '10', 'SIS_M1': '11', 'SIS_M2': '12', 'UBM_M0': '13', 'UBM_M1': '14', 'UBM_M2': '15'}
 
 # Read the CSV file, drop NaN values
-data_frame = pd.read_csv('/Users/luzijungmayr/Desktop/Stuff/University Msc/Research Project 1b/Project/Data and Script/normalised_macs_data.csv')
+data_frame = pd.read_csv('your/file/location/normalised_macs_data.csv')
 data_frame = data_frame.dropna()
 
 #subset the dataframe to include all groups
