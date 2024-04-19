@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import umap
 
 # Read the CSV file and drop NaN values
-data_frame = pd.read_csv('cleaned_data.csv')
+data_frame = pd.read_csv('your/file/loaction/cleaned_data.csv')
 data_frame = data_frame.dropna()
 
 # Define the groups
