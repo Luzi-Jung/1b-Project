@@ -1,4 +1,3 @@
-#Install all packages needed
 import numpy as np
 import scipy
 import sklearn
@@ -13,15 +12,13 @@ from sklearn.preprocessing import StandardScaler
 import plotly.graph_objects as go
 from scipy import stats
 
-#############################
-
 #PCA analysis and scree plot code
 
 # Read the CSV file, drop NaN values
-data_frame = pd.read_csv('/Users/luzijungmayr/Desktop/Stuff/University Msc/Research Project 1b/Project/Data and Script/normalised_macs_data.csv')
+data_frame = pd.read_csv('your/file/location/normalised_macs_data.csv')
 data_frame = data_frame.dropna()
 
-#Subset data frame to choose group wanted for PCA, M0 used as example
+#Subset data frame to choose group wanted for PCA
 groups_wanted = ['M0', 'M1', 'M2', 'Cardiac', 'SIS', 'UMB', 'Card_M0', 'Card_M1', 'Card_M2', 'SIS_M0', 'SIS_M1', 'SIS_M2', 'UBM_M0', 'UBM_M1', 'UBM_M2']
 subset_df = data_frame[data_frame['group_name'].isin(groups_wanted)].copy()
 #convert group_name column to categorical variable
@@ -79,14 +76,14 @@ print(removed_df)
 #export to csv file
 removed_df.to_csv('removed_data_frame.csv')
 
-# Step 2: Remove outliers
+# Remove outliers
 # Remove entire rows (data points) containing outliers
 cleaned_data_X = np.delete(X, outlier_indices[0], axis=0)
 
-# You may also want to remove corresponding rows from subset_df if necessary
+# remove corresponding rows from subset_df
 cleaned_subset_df = subset_df.drop(outlier_indices[0])
 
-# Now you can proceed with PCA using the cleaned data
+# PCA using the cleaned data
 # Scale cleaned data
 cleaned_X = scaler.fit_transform(cleaned_data_X)
 
@@ -101,7 +98,6 @@ pca_cleaned_df['group'] = cleaned_subset_df['group_name'].values
 # Plot PCA graph for cleaned data
 fig_cleaned = px.scatter(pca_cleaned_df, x='PC1', y='PC2', color='group', title=f'PCA Plot for {groups_wanted} Data (after outlier removal)')
 fig_cleaned.show()
-
 
 # Convert cleaned df to pd
 cleaned_df = pd.DataFrame(cleaned_subset_df)
