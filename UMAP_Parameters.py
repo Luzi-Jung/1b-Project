@@ -31,7 +31,7 @@ from sklearn.metrics.cluster import silhouette_samples
 #Groups names for selecting are: 'M0', 'M1', 'M2', 'Cardiac', 'SIS', 'UMB', 'Card_M0', 'Card_M1', 'Card_M2', 'SIS_M0', 'SIS_M1', 'SIS_M2', 'UBM_M0', 'UBM_M1', 'UBM_M2'}
 
 # Read the CSV file, drop NaN values
-data_frame = pd.read_csv('your/file/location/normalised_macs_data.csv')
+data_frame = pd.read_csv('your/file/location/cleaned_data.csv')
 data_frame = data_frame.dropna()
 
 #subset the dataframe to include all groups
@@ -83,7 +83,7 @@ for params in grid:
 print("Best Parameters are: ", best_params)
 print("Best Silhouette Score: ", best_score)
 
-##OUTPUT##
+## Example Output ##
 #Best Parameters are:  {'min_dist': 0, 'n_components': 2, 'n_neighbors': 11}
 #Best Silhouette Score:  0.4524649
 
