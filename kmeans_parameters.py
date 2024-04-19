@@ -30,7 +30,7 @@ import time
 from tqdm import tqdm
 
 # Read the CSV file, drop NaN values
-data_frame = pd.read_csv('/Users/luzijungmayr/Desktop/Stuff/University Msc/Research Project 1b/Project/Data and Script/cleaned_data.csv')
+data_frame = pd.read_csv('/your/file/location/cleaned_data.csv')
 data_frame = data_frame.dropna()
 
 # Define the groups
